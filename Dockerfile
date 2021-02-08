@@ -28,7 +28,7 @@ RUN apt-get update \
 # Git repo set up
 RUN git clone https://github.com/ethereum-mining/ethminer.git; \
     cd ethminer; \
-    git checkout tags/v0.12.0 
+    git checkout tags/v0.18.0 
 
 # Build
 RUN cd ethminer; \
