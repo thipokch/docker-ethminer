@@ -32,6 +32,7 @@ RUN git clone https://github.com/ethereum-mining/ethminer.git; \
 
 # Build
 RUN cd ethminer; \
+    git submodule update --init --recursive; \
     mkdir build; \
     cd build; \
     cmake .. -DETHASHCUDA=ON -DETHASHCL=OFF -DETHSTRATUM=ON; \
