@@ -22,7 +22,10 @@ RUN git clone https://github.com/no-fee-ethereum-mining/nsfminer.git; \
     git submodule update --init --recursive
 
 # Build
-RUN ls; \
+RUN pwd; \
+    cd nsfminer; \
+    pwd; \
+    ls; \
     cmake -DHUNTER_JOBS_NUMBER=4 -DETHASHCUDA=ON -DETHASHCL=OFF -DETHSTRATUM=ON -H. -Bbuild ; \
     cmake --build build -- -j4 \
     make install;
