@@ -17,7 +17,7 @@ RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime \
 
 # Git repo set up
 RUN git clone https://github.com/no-fee-ethereum-mining/nsfminer.git; \
-    cd nsfminer; \
+    cd no-fee-ethereum-mining; \
     git checkout tags/v1.3.2; \
     git submodule update --init --recursive
 
