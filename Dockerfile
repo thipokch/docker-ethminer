@@ -1,6 +1,6 @@
-FROM nvidia/cuda:8.0-devel-ubuntu16.04
+FROM nvidia/cuda:10.2-devel-ubuntu16.04
 
-MAINTAINER Anthony Tatowicz
+MAINTAINER Thipok Cholsaipant
 
 WORKDIR /
 
@@ -26,7 +26,7 @@ RUN apt-get update \
      build-essential \
      locales \
     && locale-gen en_US.UTF-8 \
-    && update-locale LANG=en_US.UTF-8 \
+    && update-locale LANG=en_US.UTF-8
 
 # Git repo set up
 RUN git clone https://github.com/ethereum-mining/ethminer.git; \
