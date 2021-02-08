@@ -7,7 +7,7 @@ WORKDIR /
 ENV TZ="America/New_York"
 
 # Package and dependency setup
-RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
+RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime \
     && apt update \
     && apt install -y git \
     cmake \
