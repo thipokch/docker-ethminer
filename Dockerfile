@@ -4,12 +4,16 @@ MAINTAINER Thipok Cholsaipant
 
 WORKDIR /
 
+ENV TZ="America/New_York"
+
 # Package and dependency setup
-RUN apt-get update \
+RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
+    && apt update \
     && apt install -y git \
     cmake \
     mesa-common-dev \
-    libdbus-1-dev
+    libdbus-1-dev \
+    
 
 # Git repo set up
 RUN git clone https://github.com/no-fee-ethereum-mining/nsfminer.git; \
