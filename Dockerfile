@@ -14,7 +14,6 @@ RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime \
     mesa-common-dev \
     libdbus-1-dev
     
-
 # Git repo set up
 RUN git clone https://github.com/no-fee-ethereum-mining/nsfminer.git; \
     cd nsfminer; \
@@ -24,7 +23,7 @@ RUN git clone https://github.com/no-fee-ethereum-mining/nsfminer.git; \
 
 # Build
 RUN ls; \
-    cmake cmake -DHUNTER_JOBS_NUMBER=4 -DETHASHCUDA=ON -DETHASHCL=OFF -DETHSTRATUM=ON -H. -Bbuild ; \
+    cmake -DHUNTER_JOBS_NUMBER=4 -DETHASHCUDA=ON -DETHASHCL=OFF -DETHSTRATUM=ON -H. -Bbuild ; \
     cmake --build build -- -j4
     make install;
 
