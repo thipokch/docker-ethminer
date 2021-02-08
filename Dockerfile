@@ -26,8 +26,11 @@ RUN pwd; \
     cd nsfminer; \
     pwd; \
     ls; \
-    cmake -DHUNTER_JOBS_NUMBER=4 -DETHASHCUDA=ON -DETHASHCL=OFF -DETHSTRATUM=ON -H. -Bbuild ; \
-    cmake --build build -- -j4 \
+    mkdir build; \
+    cd build; \
+    pwd; \
+    cmake .. -DETHASHCUDA=ON -DETHASHCL=OFF -DETHSTRATUM=ON; \
+    cmake --build .; \
     make install;
 
 # Env setup
