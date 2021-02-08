@@ -24,7 +24,7 @@ RUN git clone https://github.com/no-fee-ethereum-mining/nsfminer.git; \
 # Build
 RUN ls; \
     cmake -DHUNTER_JOBS_NUMBER=4 -DETHASHCUDA=ON -DETHASHCL=OFF -DETHSTRATUM=ON -H. -Bbuild ; \
-    cmake --build build -- -j4
+    cmake --build build -- -j4 \
     make install;
 
 # Env setup
