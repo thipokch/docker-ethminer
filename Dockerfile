@@ -23,7 +23,10 @@ RUN apt-get update \
      opencl-headers \
      mesa-common-dev \
      libmicrohttpd-dev \
-     build-essential
+     build-essential \
+     locales \
+    && locale-gen en_US.UTF-8 \
+    && update-locale LANG=en_US.UTF-8 \
 
 # Git repo set up
 RUN git clone https://github.com/ethereum-mining/ethminer.git; \
