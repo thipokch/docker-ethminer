@@ -18,12 +18,14 @@ RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime \
 # Git repo set up
 RUN git clone https://github.com/no-fee-ethereum-mining/nsfminer.git; \
     cd nsfminer; \
-    git checkout tags/v1.3.2; \
+    git checkout tags/v1.3.2 -b ; \
     git submodule update --init --recursive
 
 # Build
-RUN mkdir build; \
+RUN ls; \
+    mkdir build; \
     cd build; \
+    ls; \
     cmake .. -DETHASHCUDA=ON -DETHASHCL=OFF -DETHSTRATUM=ON; \
     cmake --build .; \
     make install;
