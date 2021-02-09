@@ -1,11 +1,11 @@
-# Ethereum CUDA Miner
+# Ethereum CUDA Miner (NSFMiner)
 
 
 ### Docker container for Ethereum mining with CUDA.
 
 Simple and easy to run, if you have a Nvidia GPU and want to mine eth.
 
-**Note:** This image builds ethminer, which is an activily maintained Genoil fork <https://github.com/ethereum-mining/ethminer>
+**Note:** This image builds nsfminer, which is an activily maintained fork of <https://github.com/no-fee-ethereum-mining/nsfminer> (EthMiner, but with support for newer CUDA)
 
 ### Requirements
 - Nvidia drivers for your GPU, you can get them here: [Nvidia drivers](http://www.nvidia.com/Download/index.aspx)
@@ -30,5 +30,5 @@ The format goes like this "address.worker/email"
 `$ etherminer --help`
 
 ### Questions?
-You can leave a comment below or send an email to `ajtatowicz@gmail.com`.  
-If this helped and you'd like to leave a tip --> `0x20ad58fe023265577565c7eb44b55c31e7497c33`
+You can leave a comment below or send an email to `thipok (point) ch@gmail.com`.  
+If this helped and you'd like to leave a tip --> `0xA12FCD6ad908ce24E78F3ED942e7F74e656e790a`
