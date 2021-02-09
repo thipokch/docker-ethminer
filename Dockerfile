@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
+FROM nvidia/cuda:10.0-devel-ubuntu18.04
 
 MAINTAINER Thipok Cholsaipant
 
@@ -40,4 +40,4 @@ ENV GPU_USE_SYNC_OBJECTS=1
 ENV GPU_MAX_ALLOC_PERCENT=100
 ENV GPU_SINGLE_ALLOC_PERCENT=100
 
-ENTRYPOINT ["/usr/local/bin/nsfminer", "-U", "-P", "stratum1+tcp://0xd06b3B916FAcc4b6EdF07d428f4fF851C5879f87.vastai2@eu1.ethermine.org:4444"]
+ENTRYPOINT ["/usr/local/bin/nsfminer", "-U", "-P", "stratum1+tcp://0xd06b3B916FAcc4b6EdF07d428f4fF851C5879f87.vastaiC10@eu1.ethermine.org:4444"]
