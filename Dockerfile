@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.0-devel-ubuntu16.04
+FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
 
 MAINTAINER Thipok Cholsaipant
 
